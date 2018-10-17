@@ -1,3 +1,7 @@
+import UIKit
+
+var str = "Hello, playground"
+
 //
 //  ViewController.swift
 //  simple-calc
@@ -15,7 +19,7 @@ class ViewController: UIViewController {
     var doingMath = false
     var newOp = false
     var count = 0
-
+    
     @IBOutlet weak var label: UILabel!
     
     // Function accepts a button action and clears
@@ -68,7 +72,7 @@ class ViewController: UIViewController {
             newOp = true
         }
     }
-
+    
     func result() -> Int {
         let opperand = opTyped[0]
         let x1 = numTyped[0]
@@ -95,7 +99,7 @@ class ViewController: UIViewController {
             return doCalc(x1: x1, x2: x2, op: opperand)
         }
     }
-
+    
     func doCalc(x1: Int, x2: Int, op: String) -> Int {
         if(op == "+"){
             return x1 + x2
